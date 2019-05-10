@@ -1,0 +1,57 @@
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css" media="screen" title="no title" charset="utf-8">
+  <title></title>
+</head>
+
+<div id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+
+                
+      	<div class="container">
+        <div class="row mt-6">
+          <div class="col-md-2 col-sm-2">
+            <a class="btn btn-light" href="/blog">Go to Blog</a>
+          </div>
+          <div class="col-md-2 col-sm-2">
+              <a class="btn btn-light" href="/authors">Go to Catagories</a>
+            </div>
+          <div class="col-md-2 col-sm-2">
+            <a class="btn btn-light" href="/cms">New Post</a>
+          </div>
+        </div>
+
+
+        <h1>{{this.post.title}}</h1>
+        <h2>{{this.post.body}}</h2>
+
+
+
+        <form class="clearfix mb-4" action="POST">
+          <div class="form-group">
+            <label for="comment-text">Name</label>
+            <input type="text" id="comment-text" class="form-control" aria-describedby="comment-text"
+              placeholder="Enter Your Name">
+          </div>
+          <div class="form-group">
+            <label for="comment-description">Comment</label>
+            <textarea class="form-control" id="comment-description" aria-describedby="comment-description"
+              placeholder="Enter Your Comment"></textarea>
+          </div>
+          <button id="submit" class="btn btn-primary float-right">Submit</button>
+        </form>
+        <h3>Top rated answers</h3>
+        <ul id="comment-list" class="list-group">
+          {{#each comments}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="comment/{{this.id}}" {{this.text}}</a> <a href="comment/{{this.id}}">{{this.description}}</a>
+            <button class="btn btn-info float-right like">like</button>
+            <button class="btn btn-success float-right counter">0</button>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </li> {{/each}} </ul> </div> </div> </div> </div> <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+            </script>
+          <script src="/js/index.js"></script>

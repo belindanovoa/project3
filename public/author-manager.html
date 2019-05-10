@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>CMS - Express</title>
+	<!-- Latest compiled and minified CSS & JS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/styles.css" media="screen" title="no title" charset="utf-8">
+	<script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="row mt-4">
+      <div class="col-md-2 col-sm-2">
+        <a class="btn btn-light" href="/blog">Go to Blog</a>
+      </div>
+			<div class="col-md-2 col-sm-2">
+        <a class="btn btn-light" href="/cms">New Post</a>
+      </div>
+    </div>
+		<div class="row">
+			<div class="col-md-8 offset-md-2">
+				<div class="author-container">
+					<h1>Category</h1>
+					<table class="table table-striped">
+						<thead>
+							<tr>
+								<th>Category</th>
+								<th># of Posts</th>
+								<th>See Category's Posts</th>
+								<th>New Post</th>
+								<th>Delete Category</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr id="form-row">
+								<form id="author-form">
+									<td colspan="4">
+										<input placeholder="Enter a Category Name" id="author-name" type="text" />
+									</td>
+									<td><button type="submit" class="btn btn-success">Create Catagory</button>
+									</td>
+								</form>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!-- Custom Script -->
+		<script src="js/author.js" type="text/javascript"></script>
+
+</body>
+
+</html>
